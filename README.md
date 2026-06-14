@@ -50,6 +50,4 @@ The project follows a layered architecture:
 3. Apply database migrations
 4. Run the application
 
-## Author
 
-Tahmid Khan
