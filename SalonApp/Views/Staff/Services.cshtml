@@ -1,0 +1,26 @@
+﻿@model List<BLL.DTOs.ServiceDTO>
+
+<div class="container mt-4">
+    <h2>Available Services</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Price</td>
+            </tr>
+        }
+    </table>
+
+    <a asp-controller="Dashboard" asp-action="Staff" class="btn btn-secondary">
+        Back
+    </a>
+</div>

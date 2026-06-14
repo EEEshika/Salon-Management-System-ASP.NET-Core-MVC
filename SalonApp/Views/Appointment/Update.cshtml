@@ -1,0 +1,98 @@
+﻿@model BLL.DTOs.AppointmentDTO
+
+<div style="min-height:85vh; background:linear-gradient(135deg,#fff5f8,#ffe6f0); padding:30px 0;">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <div class="card shadow p-4"
+                 style="border-radius:18px;
+                border:1px solid #f3a7c6;
+                background-color:#fffafa;">
+
+                <h2 class="text-center mb-4"
+                    style="color:#d63384; font-weight:bold;">
+
+                    📅 Update Appointment
+
+                </h2>
+
+                <form method="post">
+
+                    <input type="hidden" name="Id" value="@Model.Id" />
+
+                    <input type="hidden" name="CustomerId" value="@Model.CustomerId" />
+
+                    <input type="hidden" name="Status" value="@Model.Status" />
+
+                    <div class="mb-3">
+
+                        <label class="form-label">Staff</label>
+
+                        <select name="StaffId" class="form-control">
+
+                            @foreach (var staff in ViewBag.Staffs)
+                            {
+                                if (staff.Id == Model.StaffId)
+                                {
+                                    <option value="@staff.Id" selected>
+                                        @staff.Name
+                                    </option>
+                                }
+                                else
+                                {
+                                    <option value="@staff.Id">
+                                        @staff.Name
+                                    </option>
+                                }
+                            }
+
+                        </select>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">Appointment Date</label>
+
+                        <input type="datetime-local"
+                               name="AppointmentDate"
+                               class="form-control"
+                               value="@Model.AppointmentDate.ToString("yyyy-MM-ddTHH:mm")" />
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label class="form-label">Notes</label>
+
+                        <textarea name="Notes"
+                                  class="form-control">@Model.Notes</textarea>
+
+                    </div>
+
+                    <div class="d-grid">
+
+                        <button type="submit"
+                                class="btn"
+                                style="background-color:#d63384;
+                            color:white;
+                            font-weight:bold;
+                            border-radius:10px;">
+
+                            Update
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

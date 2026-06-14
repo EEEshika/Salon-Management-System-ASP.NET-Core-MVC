@@ -1,0 +1,51 @@
+﻿@model List<BLL.DTOs.ServiceDTO>
+
+<div style="min-height:85vh;
+    background:linear-gradient(135deg,#fff5f8,#ffe6f0);
+    padding:30px 0;">
+
+    <div class="container">
+
+        <div class="card shadow p-4"
+             style="border-radius:18px;
+            border:1px solid #f3a7c6;
+            background-color:#fffafa;">
+
+            <h2 class="mb-4"
+                style="color:#d63384;
+                font-weight:bold;">
+
+                💇 Available Salon Services
+
+            </h2>
+
+            <table class="table table-bordered table-hover">
+
+                <tr style="background-color:#fff0f5;">
+
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Duration</th>
+                    <th>Description</th>
+
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>@item.Name</td>
+                        <td>@item.Price</td>
+                        <td>@item.DurationMinutes Minutes</td>
+                        <td>@item.Description</td>
+
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

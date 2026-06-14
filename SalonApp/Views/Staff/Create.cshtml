@@ -1,0 +1,51 @@
+﻿@model BLL.DTOs.StaffDTO
+
+<div style="min-height:85vh; background:linear-gradient(135deg,#fff5f8,#ffe6f0); padding:30px 0;">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <div class="card shadow p-4" style="border-radius:18px; border:1px solid #f3a7c6; background-color:#fffafa;">
+
+                <h2 class="text-center mb-4" style="color:#d63384; font-weight:bold;">👩‍💼 Add Staff</h2>
+
+                <form method="post">
+
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" name="Name" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Phone</label>
+                        <input type="text" name="Phone" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Specialty</label>
+                        <input type="text" name="Specialty" class="form-control" />
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">Experience Years</label>
+                        <input type="number" name="ExperienceYears" class="form-control" />
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit"
+                                class="btn"
+                                style="background-color:#d63384; color:white; font-weight:bold; border-radius:10px;">
+                            Create
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

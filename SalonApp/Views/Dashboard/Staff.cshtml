@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Staff Dashboard";
+}
+
+<div style="min-height:85vh; background:linear-gradient(135deg,#fff5f8,#ffe6f0); padding:40px 0;">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h1 style="color:#d63384; font-weight:bold;">👩‍💼 Staff Dashboard</h1>
+            <p style="color:#666; font-size:18px;">Manage your assigned salon appointments</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4">
+                <div class="card shadow h-100 p-4 text-center d-flex flex-column" style="border-radius:18px; background-color:#fffafa;">
+                    <div style="font-size:50px;">📅</div>
+                    <h3 style="color:#d63384;">My Appointments</h3>
+                    <p style="min-height:55px;">View appointments assigned to you and update status.</p>
+
+                    <a asp-controller="Staff"
+                           asp-action="MyAppointments"
+                           class="btn mt-auto"
+                           style="background-color:#d63384; color:white; border-radius:10px;">
+                        View Appointments
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow h-100 p-4 text-center d-flex flex-column" style="border-radius:18px; background-color:#fffafa;">
+                    <div style="font-size:50px;">💇</div>
+                    <h3 style="color:#d63384;">Service Details</h3>
+                    <p style="min-height:55px;">Check available salon services.</p>
+
+                    <a asp-controller="Staff"
+                           asp-action="Services"
+                           class="btn mt-auto"
+                           style="background-color:#d63384; color:white; border-radius:10px;">
+                        View Services
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

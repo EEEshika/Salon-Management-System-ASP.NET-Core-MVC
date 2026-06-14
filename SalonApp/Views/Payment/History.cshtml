@@ -1,0 +1,32 @@
+﻿@model List<BLL.DTOs.PaymentDTO>
+
+<div class="container mt-4">
+    <h2>Payment History</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Appointment Id</th>
+            <th>Total Amount</th>
+            <th>Payment Date</th>
+            <th>Method</th>
+            <th>Status</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.AppointmentId</td>
+                <td>@item.TotalAmount</td>
+                <td>@item.PaymentDate</td>
+                <td>@item.PaymentMethod</td>
+                <td>@item.Status</td>
+            </tr>
+        }
+    </table>
+
+    <a asp-controller="Appointment"
+           asp-action="Index"
+           class="btn btn-secondary">
+        Back
+    </a>
+</div>

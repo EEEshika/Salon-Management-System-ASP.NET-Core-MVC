@@ -1,0 +1,104 @@
+﻿@model BLL.DTOs.LoginDTO
+
+<div style="min-height:85vh; background:linear-gradient(135deg,#fff5f8,#ffe6f0); padding:30px 0;">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-5">
+
+            <div class="card shadow"
+                 style="border-radius:18px; border:1px solid #f3a7c6; background-color:#fffafa; overflow:hidden;">
+
+                <div style="padding:35px;">
+
+                    <div class="text-center mb-4">
+
+                        <div style="font-size:45px;">💇‍♀️</div>
+
+                        <h2 style="color:#d63384; font-weight:bold;">
+                            Salon Login
+                        </h2>
+
+                        <p style="color:#777;">
+                            Welcome Back
+                        </p>
+
+                    </div>
+
+                    @if (TempData["Msg"] != null)
+                    {
+                        <div class="alert alert-danger">
+                            @TempData["Msg"]
+                        </div>
+                    }
+
+                    <form method="post">
+
+                        <div class="mb-3">
+
+                            <label class="form-label">Username</label>
+
+                            <div class="input-group">
+                                <span class="input-group-text">👩</span>
+
+                                <input type="text"
+                                       name="Username"
+                                       class="form-control" />
+                            </div>
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label class="form-label">Password</label>
+
+                            <div class="input-group">
+                                <span class="input-group-text">🔒</span>
+
+                                <input type="password"
+                                       name="Password"
+                                       class="form-control" />
+                            </div>
+
+                        </div>
+
+                        <div class="d-grid">
+
+                            <input type="submit"
+                                   value="Login"
+                                   class="btn"
+                                   style="background-color:#d63384;
+                            color:white;
+                            font-weight:bold;
+                            border-radius:10px;
+                            padding:10px;" />
+
+                        </div>
+
+                    </form>
+
+                    <div class="text-center mt-3">
+
+                        New customer?
+
+                        <a asp-controller="Auth"
+                               asp-action="Register"
+                               style="color:#d63384;
+                            text-decoration:none;
+                            font-weight:bold;">
+
+                            Register here
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

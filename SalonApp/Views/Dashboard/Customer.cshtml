@@ -1,0 +1,157 @@
+﻿<div style="min-height:85vh;
+    background:linear-gradient(135deg,#fff5f8,#ffe6f0);
+    padding:40px 0;">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h1 style="color:#d63384;
+                font-weight:bold;">
+
+                💖 Customer Dashboard
+
+            </h1>
+
+            <p style="color:#666;
+                font-size:18px;">
+
+                Book appointments and enjoy our salon services
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Browse Services -->
+
+            <div class="col-md-4">
+
+                <div class="card shadow h-100 p-4 text-center"
+                     style="border-radius:18px;
+                    background-color:#fffafa;
+                    border:1px solid #f3a7c6;">
+
+                    <div style="font-size:50px;">
+
+                        💅
+
+                    </div>
+
+                    <h3 style="color:#d63384;">
+
+                        Browse Services
+
+                    </h3>
+
+                    <p>
+
+                        View available salon services.
+
+                    </p>
+
+                    <a asp-controller="Customer"
+                           asp-action="Services"
+                           class="btn mt-2"
+                           style="background-color:#d63384;
+                        color:white;
+                        border-radius:10px;">
+
+                        View Services
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Book Appointment -->
+
+            <div class="col-md-4">
+
+                <div class="card shadow h-100 p-4 text-center"
+                     style="border-radius:18px;
+                    background-color:#fffafa;
+                    border:1px solid #f3a7c6;">
+
+                    <div style="font-size:50px;">
+
+                        📅
+
+                    </div>
+
+                    <h3 style="color:#d63384;">
+
+                        Book Appointment
+
+                    </h3>
+
+                    <p>
+
+                        Choose service, staff and time slot.
+
+                    </p>
+
+                    <a asp-controller="Appointment"
+                           asp-action="Create"
+                           class="btn mt-2"
+                           style="background-color:#d63384;
+                        color:white;
+                        border-radius:10px;">
+
+                        Book Now
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- My History -->
+
+            <div class="col-md-4">
+
+                <div class="card shadow h-100 p-4 text-center"
+                     style="border-radius:18px;
+                    background-color:#fffafa;
+                    border:1px solid #f3a7c6;">
+
+                    <div style="font-size:50px;">
+
+                        📋
+
+                    </div>
+
+                    <h3 style="color:#d63384;">
+
+                        My History
+
+                    </h3>
+
+                    <p>
+
+                        View appointment history and status.
+
+                    </p>
+
+                    <a asp-controller="Customer"
+                           asp-action="History"
+                           class="btn mt-2"
+                           style="background-color:#d63384;
+                        color:white;
+                        border-radius:10px;">
+
+                        View History
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
