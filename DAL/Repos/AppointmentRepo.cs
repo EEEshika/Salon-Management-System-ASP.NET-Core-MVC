@@ -41,10 +41,24 @@ namespace DAL.Repos
             return db.SaveChanges() > 0;
         }
 
+
+
+
         public bool Delete(int id)
         {
             var exobj = Get(id);
 
+            // Delete Payment first
+            var payments = db.Payments
+                             .Where(p => p.AppointmentId == id)
+                             .ToList();
+
+            foreach (var payment in payments)
+            {
+                db.Payments.Remove(payment);
+            }
+
+            // Delete Appointment Services
             var aps = db.AppointmentServices
                         .Where(a => a.AppointmentId == id)
                         .ToList();
@@ -54,6 +68,7 @@ namespace DAL.Repos
                 db.AppointmentServices.Remove(item);
             }
 
+            // Delete Appointment
             db.Appointments.Remove(exobj);
 
             return db.SaveChanges() > 0;

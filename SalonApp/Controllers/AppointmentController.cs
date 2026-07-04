@@ -117,26 +117,32 @@ namespace SalonApp.Controllers
             return View(data);
         }
 
-        [AdminAccess]
+       [HttpPost]
         [HttpPost]
         public IActionResult Delete(int id)
         {
-            var res = appointmentService.Delete(id);
-
-            if (res)
+            try
             {
-                TempData["Msg"] = "Appointment Deleted Successfully";
-                TempData["Class"] = "alert-success";
-            }
-            else
-            {
-                TempData["Msg"] = "Appointment Delete Failed";
-                TempData["Class"] = "alert-danger";
-            }
+                var res = appointmentService.Delete(id);
 
-            return RedirectToAction("Index");
+                if (res)
+                {
+                    TempData["Msg"] = "Appointment Deleted Successfully";
+                    TempData["Class"] = "alert-success";
+                }
+                else
+                {
+                    TempData["Msg"] = "Appointment Delete Failed";
+                    TempData["Class"] = "alert-danger";
+                }
+
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                return Content(ex.ToString());
+            }
         }
-
 
         [HttpGet]
         public IActionResult CustomerAppointments(int id)
