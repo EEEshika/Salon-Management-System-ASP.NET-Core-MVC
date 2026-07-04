@@ -158,11 +158,7 @@ SalonManagementSystem
 
 ---
 
-## Appointment Management
 
-![Appointment List](images/admin-dashboard-appointment-list.png)
-
----
 
 ## Payment History
 
@@ -170,11 +166,6 @@ SalonManagementSystem
 
 ---
 
-## Customer Appointment History
-
-![Appointment History](images/customer-appointments-history.png)
-
----
 
 # 🚀 Installation
 
